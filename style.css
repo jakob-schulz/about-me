@@ -1,0 +1,33 @@
+body {
+    font-family: "Roboto", sans-serif; /*Anwenden der Schriftart*/
+}
+
+.name {
+    text-align: left;
+}
+
+/*Format fuer die Menuebar*/
+.menu {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 5%;
+}
+
+.menulinks{
+    font-size: 200%;
+}
