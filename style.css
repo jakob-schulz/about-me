@@ -1,33 +1,90 @@
 body {
-    font-family: "Roboto", sans-serif; /*Anwenden der Schriftart*/
+    /*Anwenden der Schriftart*/
+    font-family: "Roboto", sans-serif;
 }
 
-.name {
-    text-align: left;
+/*Gibt die groesse der Home Seite in Pixel anb*/
+.home{
+    height: 1000px;
 }
 
 /*Format fuer die Menuebar*/
-.menu {
+.menuBar {
     background-color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     width: 50%;
     margin: 0 auto;
+    /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
+    animation: slideMenu 1s linear;
 }
 
 .content {
+    /*Festlegen der Breite*/
+    width: 60%;
+    /*Setzt den Inhalt auf die Mitte der Seite*/
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /*bis hier*/
     background-color: white;
-    padding-left: 3%;
-    padding-right: 3%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
+    animation: slideContent 2s linear;
 }
 
-.logo {
-    width: 5%;
-}
-
-.menulinks{
+.menulinks {
     font-size: 200%;
+}
+
+.overview {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    /*Richtet den Namen und die Kurzinfos mittig ein*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutMe {
+    position: relative;
+}
+
+/*CSS Animation, die ein Element herein sliden lässt*/
+@keyframes slideContent {
+    from {
+        /*Startposition des Elements*/
+        transform: translate(-50%, 60%);
+        /*Sichtbarkeit*/
+        opacity: 0;
+    }
+
+    /*Enposition des Elements*/
+    to {
+        /*Endposition des Elements*/
+        transform: translate(-50%, 50%);
+        /*Sichtbarkeit*/
+        opacity: 1;
+    }
+}
+
+@keyframes slideMenu {
+    from {
+        /*Startposition des Elements*/
+        transform: translate(0%, -20%);
+        /*Sichtbarkeit*/
+        opacity: 0;
+    }
+
+    /*Enposition des Elements*/
+    to {
+        /*Endposition des Elements*/
+        transform: translate(0%, 0%);
+        /*Sichtbarkeit*/
+        opacity: 1;
+    }
 }
