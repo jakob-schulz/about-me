@@ -29,6 +29,16 @@ body {
     position: fixed;
 }
 
+/*Stil der Buttons in der Menubar*/
+#buaboutMe {
+    /*Aenderung des Styles des buttons*/
+    font-size: 100%;
+    background-color: white;
+    border-color: white;
+    border: 0;
+}
+
+
 #content {
     /*Festlegen der Breite*/
     width: 60%;
@@ -63,26 +73,22 @@ body {
     position: relative;
     height: 900px;
 }
-
-#aboutMe table {
+.tableaboutMe {
     font-size: x-large;
     position: relative;
     top: 15%;
     left: 30%;
     width: 50%;
-    /*animation: slideaboutMe 2s linear;*/
+}
+/*Die Animation muss in eine extra Klasse. Im Javascript wird die Animation zu ".tableaboutMe" hinzugefügt, wenn man sie abspielen möchte*/
+.animated-aboutMe {
+    animation: slideaboutMe 2s linear;
 }
 
 
-#buaboutMe {
-    /*Aenderung des Styles des buttons*/
-    font-size: 100%;
-    background-color: white;
-    border-color: white;
-    border: 0;
-}
 
-/*CSS Animation, die ein Element herein sliden lässt*/
+/*CSS Animationen, die ein Element herein sliden lassen*/
+
 @keyframes slideContent {
     from {
         /*Startposition des Elements*/

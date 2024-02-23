@@ -1,5 +1,7 @@
 //Man bekommt den button mit dem Namen buaboutMe
 const button = document.getElementById("buaboutMe");
+const tableaboutMe = document.querySelector('.tableaboutMe');
+
 
 //Wir aufgerufen, wenn der button geklickt wird
 button.addEventListener("click", () => {
@@ -8,6 +10,8 @@ button.addEventListener("click", () => {
   button.disabled = true;
   //Die Funktion scrollToContainer wird aufgerufen
   scrollToContaineraboutMe();
+  //Wenn der button das erste mal angeklickt wird, wird die Animation gestartet
+  tableaboutMe.classList.add('animated-aboutMe');
   //Nach 200 Millisekunden wird der button wird eingeblendet
   setTimeout(() => {
     button.disabled = false;
