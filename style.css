@@ -5,7 +5,7 @@ body {
 
 /*Gibt die groesse der Home Seite in Pixel an*/
 #home {
-    height: 900px;
+    height: 700px;
 }
 
 /*Format fuer die Menuebar*/
@@ -79,10 +79,12 @@ body {
     top: 15%;
     left: 30%;
     width: 50%;
+    /*Am Anfang ist die Tabelle unsichtbar*/
+    opacity: 0;
 }
 /*Die Animation muss in eine extra Klasse. Im Javascript wird die Animation zu ".tableaboutMe" hinzugefügt, wenn man sie abspielen möchte*/
 .animated-aboutMe {
-    animation: slideaboutMe 2s linear;
+    animation: slideaboutMe 1s ease-out;
 }
 
 
