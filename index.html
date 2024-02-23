@@ -15,39 +15,105 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <!--Titel des Tabs-->
-    <title>Home</title>
+        <!--Titel des Tabs-->
+        <title>Jakob Schulz</title>
 </head>
 
 <body>
     <!--Container-->
-    <div class="home">
-        <div class="menuBar">
-            <div class="menulinks">
-                Home
-            </div>
-            <div class="menulinks">
-                Über mich
-            </div>
-            <div class="menulinks">
-                Kontakt
-            </div>
-            <div class="menulinks">
-                Sprachen
-            </div>
+    <div id="menuBar">
+        <div class="menulinks">
+            Home
         </div>
-        <div class="content">
-            <div class="overview">
+        <div class="menulinks">
+            <!--Link an die Stelle mit informationen ueber mich-->
+            <!--<a href="#aboutMe">-->
+                <!--Erzeugen eines buttons mit dem Namen buaboutMe-->
+                <input type="button" id="buaboutMe" value="Über mich">
+                <script src="button.js"></script>
+            <!--</a>-->
+            </input>
+        </div>
+        <div class="menulinks">
+            Kontakt
+        </div>
+        <div class="menulinks">
+            Sprachen
+        </div>
+    </div>
+    <div id="home">
+        <div id="content">
+            <div id="overview">
                 <h1>Jakob Schulz</h1> <!--class wird benoetigt, um der ueberschrift einen namen zu geben-->
                 <p>Mein Name ist Jakob Schulz, ich bin ein angehender Informatiker und studiere im zweiten Semester an
                     der Hochschule Furtwangen</p>
             </div>
-            <div class="picture">
+            <div id="picture">
                 <img src="Vorlage_bild.png">
             </div>
         </div>
     </div>
-    <div class="aboutMe">
-        Dies ist ein Test
+    <div id="aboutMe">
+        <table>
+            <tr>
+                <th>Informationen über mich</th>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>Jakob Schulz</td>
+            </tr>
+            <tr>
+                <td>Alter:</td>
+                <td>19 Jahre</td>
+            </tr>
+            <tr>
+                <td>Geschwister:</td>
+                <td>1 Bruder</td>
+            </tr>
+            <tr>
+                <td>Wohnort</td>
+                <td>Baden-Würtemberg</td>
+            </tr>
+            <tr>
+                <td>Schulbildung</td>
+                <td>Allgemeinbildendes Abitur</td>
+            </tr>
+            <tr>
+                <td>Leistungsfächer in der Schule:&emsp;&emsp;</td>
+                <td>Informatik, Mathematik, Physik</td>
+            </tr>
+            <tr>
+                <td>Studium:</td>
+                <td>Hochschule Furtwangen 2. Semester</td>
+            </tr>
+            <tr>
+                <td>Hobbys:</td>
+                <td><img src="trombone_icon.png" width="30"> Posaune spielen</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="football_icon.png" width="30"> Fußball spielen</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="ski_icon.png" width="30"> Skifahren</td>
+            </tr>
+            <tr>
+                <td>Kenntnisse:</td>
+                <td>DELF Diplom B1</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="C_icon.png" width="30"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="C++_icon.png" width="30"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="Csharp_icon.png" width="30"></td>
+            </tr>
+        </table>
     </div>
 </body>

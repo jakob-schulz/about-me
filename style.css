@@ -3,24 +3,33 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-/*Gibt die groesse der Home Seite in Pixel anb*/
-.home{
-    height: 1000px;
+/*Gibt die groesse der Home Seite in Pixel an*/
+#home {
+    height: 900px;
 }
 
 /*Format fuer die Menuebar*/
-.menuBar {
+#menuBar {
+    /*Sorgt dafuer, dass Menubar nicht hinter anderen Elementen verschwindet*/
+    z-index: 1;
+    /*bis hier*/
     background-color: white;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
+    /*Groesse und Position der Menubar*/
     width: 50%;
-    margin: 0 auto;
+    left: 25%;
+    /*Rand um die Menubar*/
+    padding: 10px;
+    /*Menubar ist an buendig mit oberstem Rand des Fensters*/
+    top: 0%;
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
     animation: slideMenu 1s linear;
+    /*Position muss fixiert sein, damit MenuBar nicht verschwindet*/
+    position: fixed;
 }
 
-.content {
+#content {
     /*Festlegen der Breite*/
     width: 60%;
     /*Setzt den Inhalt auf die Mitte der Seite*/
@@ -39,7 +48,7 @@ body {
     font-size: 200%;
 }
 
-.overview {
+#overview {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -50,8 +59,27 @@ body {
     justify-content: center;
 }
 
-.aboutMe {
+#aboutMe {
     position: relative;
+    height: 900px;
+}
+
+#aboutMe table {
+    font-size: x-large;
+    position: relative;
+    top: 15%;
+    left: 30%;
+    width: 50%;
+    /*animation: slideaboutMe 2s linear;*/
+}
+
+
+#buaboutMe {
+    /*Aenderung des Styles des buttons*/
+    font-size: 100%;
+    background-color: white;
+    border-color: white;
+    border: 0;
 }
 
 /*CSS Animation, die ein Element herein sliden lässt*/
@@ -75,7 +103,8 @@ body {
 @keyframes slideMenu {
     from {
         /*Startposition des Elements*/
-        transform: translate(0%, -20%);
+        left: 25%;
+        top: -3%;
         /*Sichtbarkeit*/
         opacity: 0;
     }
@@ -83,7 +112,27 @@ body {
     /*Enposition des Elements*/
     to {
         /*Endposition des Elements*/
-        transform: translate(0%, 0%);
+        left: 25%;
+        top: 0%;
+        /*Sichtbarkeit*/
+        opacity: 1;
+    }
+}
+
+@keyframes slideaboutMe {
+    from {
+        /*Startposition des Elements*/
+        left: 30%;
+        top: 25%;
+        /*Sichtbarkeit*/
+        opacity: 0;
+    }
+
+    /*Enposition des Elements*/
+    to {
+        /*Endposition des Elements*/
+        left: 30%;
+        top: 15%;
         /*Sichtbarkeit*/
         opacity: 1;
     }
