@@ -29,8 +29,12 @@ body {
     position: fixed;
 }
 
+.menulinks {
+    font-size: 200%;
+}
+
 /*Stil der Buttons in der Menubar*/
-#buaboutMe {
+.buttonsStyle {
     /*Aenderung des Styles des buttons*/
     font-size: 100%;
     background-color: white;
@@ -53,11 +57,6 @@ body {
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
     animation: slideContent 2s linear;
 }
-
-.menulinks {
-    font-size: 200%;
-}
-
 #overview {
     margin-left: auto;
     margin-right: auto;
@@ -68,6 +67,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 #aboutMe {
     position: relative;
@@ -87,6 +87,27 @@ body {
     animation: slideaboutMe 1s ease-out;
 }
 
+
+#contact{
+    height: 800px;
+}
+.contact_information{
+    position: relative;
+    height: 200px;
+    width: 40%;
+    left: 30%;
+    opacity: 0;
+}
+#tablesocialmedia{
+    font-size: x-large;
+}
+#githublink{
+    color: black;
+    text-decoration: none;
+}
+.animated-contact{
+    animation: slidecontact 2s ease-out;
+}
 
 
 /*CSS Animationen, die ein Element herein sliden lassen*/
@@ -141,6 +162,25 @@ body {
         /*Endposition des Elements*/
         left: 30%;
         top: 15%;
+        /*Sichtbarkeit*/
+        opacity: 1;
+    }
+}
+
+@keyframes slidecontact{
+    from {
+        /*Startposition des Elements*/
+        left: 30%;
+        top: 30%;
+        /*Sichtbarkeit*/
+        opacity: 0;
+    }
+
+    /*Enposition des Elements*/
+    to {
+        /*Endposition des Elements*/
+        left: 30%;
+        top: 0%;
         /*Sichtbarkeit*/
         opacity: 1;
     }

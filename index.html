@@ -15,26 +15,26 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <!--Titel des Tabs-->
-        <title>Jakob Schulz</title>
+    <!--Titel des Tabs-->
+    <title>Jakob Schulz</title>
 </head>
 
 <body>
     <!--Container-->
     <div id="menuBar">
         <div class="menulinks">
-            Home
-        </div>
-        <div class="menulinks">
-            <!--Link an die Stelle mit informationen ueber mich-->
-            <!--<a href="#aboutMe">-->
-                <!--Erzeugen eines buttons mit dem Namen buaboutMe-->
-                <input type="button" id="buaboutMe" value="Über mich">
-            <!--</a>-->
+            <!--Erzeugen eines buttons mit dem Namen buhome. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
+            <input type="button" id="buhome" class="buttonsStyle" value="Home">
             </input>
         </div>
         <div class="menulinks">
-            Kontakt
+            <!--Erzeugen eines buttons mit dem Namen buaboutMe. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
+            <input type="button" id="buaboutMe" class="buttonsStyle" value="Über mich">
+            </input>
+        </div>
+        <div class="menulinks">
+            <!--Erzeugen eines buttons mit dem Namen contact. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
+            <input type="button" id="bucontact" class="buttonsStyle" value="Kontakt">
         </div>
         <div class="menulinks">
             Sprachen
@@ -114,6 +114,19 @@
                 <td><img src="Csharp_icon.png" width="30"></td>
             </tr>
         </table>
+    </div>
+    <div id="contact">
+        <div class="contact_information">
+            <table id="tablesocialmedia">
+                <tr>
+                    <th>Kontaktinformationen</th>
+                </tr>
+                <tr>
+                    <td><img src="github_icon.png" width="30">GitHub:</td>
+                    <td><a id="githublink" href="https://github.com/jakob-schulz">jakob-schulz</a></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <script src="button.js"></script>
 </body>
