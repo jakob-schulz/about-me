@@ -17,17 +17,17 @@ buaboutMe.addEventListener("click", () => {
     buaboutMe.disabled = false;
   }, 250);
 });
-bucontact.addEventListener("click", () =>{
-    //button wird ausgeblednet, nachdem er angeklickt wurde
-    bucontact.disabled = true;
-    //Die Funktion scrollToContainer wird aufgerufen
-    scrollToContaineraboutMe(document.getElementById("contact"));
-    //Nach 200 Millisekunden wird der button wird eingeblendet
-    setTimeout(() => {
-      bucontact.disabled = false;
-    }, 250);
+bucontact.addEventListener("click", () => {
+  //button wird ausgeblednet, nachdem er angeklickt wurde
+  bucontact.disabled = true;
+  //Die Funktion scrollToContainer wird aufgerufen
+  scrollToContaineraboutMe(document.getElementById("contact"));
+  //Nach 200 Millisekunden wird der button wird eingeblendet
+  setTimeout(() => {
+    bucontact.disabled = false;
+  }, 250);
 });
-buhome.addEventListener("click", () =>{
+buhome.addEventListener("click", () => {
   //button wird ausgeblednet, nachdem er angeklickt wurde
   buhome.disabled = true;
   //Die Funktion scrollToContainer wird aufgerufen
@@ -101,4 +101,39 @@ const observercontact = new IntersectionObserver(callbackcontact, options);
 
 // Des Zielelement, dass ueberwacht werden soll wird angegeben
 observercontact.observe(contact);
+
+
+document.getElementById("E-MailContact").addEventListener("submit", function (event) {
+  event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+  // Daten aus dem Formular sammeln
+  var formData = new FormData(this);
+
+  // AJAX-Anfrage zum Senden der Daten an Formspree -> steht fuer Asynchronous "JavaScript and XML". Damit koennen Daten zwischen Webserver und Webbrowser ausgetauscht werden, ohne das die gesamte Seite neu geladen werden muss
+  var xhr = new XMLHttpRequest();
+
+  //Eine POST-Anfrage an formspree wird eröffnet
+  xhr.open("POST", "https://formspree.io/f/xayrjbaa");
+  xhr.setRequestHeader("Accept", "application/json");
+  //Daten werden per E-Mail mit Hilfe von forms versendet. Da Github nur statische Websites zur Verfuegung stellt werden die Infos der Form (formData) an formspree "gesendet", welches dann eine E-Mail mit dem Inhalt sendet
+  xhr.send(formData);
+
+  //Wenn sich der Status der AJAX-Anfrage aendert wird folgende Funktion ausgefuehrt:
+  xhr.onreadystatechange = function () {
+    //Es wird ueberprueft, ob die Anfrage abgeschlossen ist -> Ob versucht wurde etwas an formspree zu senden
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        // Wurde die Anfrage erfolgreich gesendet wird eine Bestätigungsnachricht angezeigt
+        alert("Vielen Dank für Ihre Nachricht!");
+        // Der Inhalt der beiden Eingaben wird zurueckgesetzt
+        document.getElementById("Email").value = "";
+        document.getElementById("Message").value = "";
+      } else {
+        // Wurde die Nachricht nicht erfolgreich gesendet, wird eine Fehlermeldung angezeigt
+        alert("Leider konnte Ihre Nachricht nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich über einen anderen Weg.");
+      }
+    }
+  }
+});
+
 

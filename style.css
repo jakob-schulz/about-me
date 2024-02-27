@@ -89,17 +89,18 @@ body {
 
 
 #contact{
-    height: 800px;
+    height: 500px;
 }
 .contact_information{
     position: relative;
-    height: 200px;
+    height: 700px;
     width: 40%;
     left: 30%;
     opacity: 0;
 }
 #tablesocialmedia{
     font-size: x-large;
+    padding-bottom: 30px;
 }
 #githublink{
     color: black;
@@ -108,6 +109,54 @@ body {
 .animated-contact{
     animation: slidecontact 2s ease-out;
 }
+
+#E-MailContactForm{
+    font-size: x-large;
+    width: 100%;
+}
+
+.E-MailInput{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+#Email {
+    width: 80%;
+    /*Gibt die Hoehe der Textbox an*/
+    height: 30px;
+    /*Gibt die Dicke, Art und Farbe der Umrandung an*/
+    border: 1px solid #ced4da;
+    /*Abrundung der Ecken der Eingabefelder*/
+    border-radius: 0.25rem;
+}
+.MessageInput{
+    padding-top: 10px;
+}
+#Message{
+    width: 80%;
+    /*Gibt die Hoehe der Textbox an*/
+    height: 100px;
+    /*Gibt die Dicke, Art und Farbe der Umrandung an*/
+    border: 1px solid #ced4da;
+    /*Abrundung der Ecken der Eingabefelder*/
+    border-radius: 0.25rem;
+    /*Erlaubt nur die vertikale Goessenaenderung der Messagebox*/
+    resize: vertical;
+}
+#submittButton{
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    /*Farbe des buttons und des Rander*/
+    background-color:#007bff;
+    border-color: #007bff;
+    /*Schriftfarbe*/
+    color: white;
+    /*Abrundung der Ecken der Eingabefelder*/
+    border-radius: 0.25rem;
+    /*Stil des Randes des buttons*/
+    border-style: none;
+}
+
 
 
 /*CSS Animationen, die ein Element herein sliden lassen*/

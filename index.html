@@ -126,7 +126,24 @@
                     <td><a id="githublink" href="https://github.com/jakob-schulz">jakob-schulz</a></td>
                 </tr>
             </table>
+            <div id="E-MailContactForm">
+                <b>Direkter Kontakt:</b>
+                <form id="E-MailContact">
+                    <label for="Email" class="E-MailLabel">Ihre E-Mail Adresse</label>
+                    <div class="E-MailInput">
+                        <input type="email" id="Email" name="Email" required>
+                    </div>
+
+                    <label for="Message" class="messageLabel">Ihre Nachricht</label>
+                    <div class="MessageInput">
+                        <textarea id="Message" name="Message" rows="6" maxlength="3000" required></textarea>
+                    </div>
+
+                    <button type="submit" id="submittButton">Nachricht senden</button>
+            </div>
+            </form>
         </div>
+    </div>
     </div>
     <script src="button.js"></script>
 </body>
