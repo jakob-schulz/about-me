@@ -11,7 +11,7 @@ buaboutMe.addEventListener("click", () => {
   //button wird ausgeblednet, nachdem er angeklickt wurde
   buaboutMe.disabled = true;
   //Die Funktion scrollToContainer wird aufgerufen und der Container, zu dem man scrollen moechte wird als Parameter uebergeben
-  scrollToContaineraboutMe(document.querySelector('#aboutMe'));
+  scrollToContainer(document.querySelector('#aboutMe'));
   //Nach 200 Millisekunden wird der button wird eingeblendet
   setTimeout(() => {
     buaboutMe.disabled = false;
@@ -21,7 +21,7 @@ bucontact.addEventListener("click", () => {
   //button wird ausgeblednet, nachdem er angeklickt wurde
   bucontact.disabled = true;
   //Die Funktion scrollToContainer wird aufgerufen
-  scrollToContaineraboutMe(document.getElementById("contact"));
+  scrollToContainer(document.getElementById("contact"));
   //Nach 200 Millisekunden wird der button wird eingeblendet
   setTimeout(() => {
     bucontact.disabled = false;
@@ -31,16 +31,15 @@ buhome.addEventListener("click", () => {
   //button wird ausgeblednet, nachdem er angeklickt wurde
   buhome.disabled = true;
   //Die Funktion scrollToContainer wird aufgerufen
-  scrollToContaineraboutMe(document.getElementById("home"));
+  scrollToContainer(document.getElementById("home"));
   //Nach 200 Millisekunden wird der button wird eingeblendet
   setTimeout(() => {
     buhome.disabled = false;
   }, 250);
 });
 
-
 //Funktion, die zu dem Container scrolllt, der als Parameter uebergeben wird
-function scrollToContaineraboutMe(arg) {
+function scrollToContainer(arg) {
   //Zu dem uebergebenen Container wird gescrollt
   arg.scrollIntoView({ behavior: "smooth" });
 }

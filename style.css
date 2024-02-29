@@ -1,17 +1,29 @@
 body {
     /*Anwenden der Schriftart*/
-    font-family: "Roboto", sans-serif;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
 }
 
 /*Gibt die groesse der Home Seite in Pixel an*/
 #home {
-    height: 700px;
+    height: 600px;
+}
+
+/*Menubar erstreckt sich ueber gesamte Seite*/
+#menuBar {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    top: 0%;
+    height: 65px;
 }
 
 /*Format fuer die Menuebar*/
-#menuBar {
+#ContentMenuBar {
     /*Sorgt dafuer, dass Menubar nicht hinter anderen Elementen verschwindet*/
-    z-index: 1;
+    z-index: 2;
     /*bis hier*/
     background-color: white;
     display: flex;
@@ -20,7 +32,7 @@ body {
     width: 50%;
     left: 25%;
     /*Rand um die Menubar*/
-    padding: 10px;
+    padding: 9px;
     /*Menubar ist an buendig mit oberstem Rand des Fensters*/
     top: 0%;
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
@@ -48,8 +60,9 @@ body {
     width: 60%;
     /*Setzt den Inhalt auf die Mitte der Seite*/
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    left: 25%;
+    top: 22%;
+    /*transform: translate(-50%, 35%);
     /*bis hier*/
     background-color: white;
     display: flex;
@@ -57,10 +70,8 @@ body {
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
     animation: slideContent 2s linear;
 }
+
 #overview {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
     /*Richtet den Namen und die Kurzinfos mittig ein*/
     display: flex;
     flex-direction: column;
@@ -71,54 +82,61 @@ body {
 
 #aboutMe {
     position: relative;
-    height: 900px;
+    height: 650px;
 }
+
 .tableaboutMe {
-    font-size: x-large;
+    font-size: large;
     position: relative;
-    top: 15%;
-    left: 30%;
+    top: 18%;
+    left: 25%;
     width: 50%;
     /*Am Anfang ist die Tabelle unsichtbar*/
     opacity: 0;
 }
+
 /*Die Animation muss in eine extra Klasse. Im Javascript wird die Animation zu ".tableaboutMe" hinzugefügt, wenn man sie abspielen möchte*/
 .animated-aboutMe {
     animation: slideaboutMe 1s ease-out;
 }
 
 
-#contact{
-    height: 500px;
+#contact {
+    height: 600px;
 }
-.contact_information{
+
+.contact_information {
     position: relative;
-    height: 700px;
+    height: 600px;
     width: 40%;
-    left: 30%;
+    left: 25%;
     opacity: 0;
 }
-#tablesocialmedia{
-    font-size: x-large;
+
+#tablesocialmedia {
+    font-size: large;
     padding-bottom: 30px;
 }
-#githublink{
+
+#githublink {
     color: black;
     text-decoration: none;
 }
-.animated-contact{
+
+.animated-contact {
     animation: slidecontact 2s ease-out;
 }
 
-#E-MailContactForm{
-    font-size: x-large;
+#E-MailContactForm {
+    font-size: large;
     width: 100%;
 }
 
-.E-MailInput{
+.E-MailInput {
     padding-top: 10px;
     padding-bottom: 20px;
 }
+
 #Email {
     width: 80%;
     /*Gibt die Hoehe der Textbox an*/
@@ -128,10 +146,12 @@ body {
     /*Abrundung der Ecken der Eingabefelder*/
     border-radius: 0.25rem;
 }
-.MessageInput{
+
+.MessageInput {
     padding-top: 10px;
 }
-#Message{
+
+#Message {
     width: 80%;
     /*Gibt die Hoehe der Textbox an*/
     height: 100px;
@@ -142,12 +162,13 @@ body {
     /*Erlaubt nur die vertikale Goessenaenderung der Messagebox*/
     resize: vertical;
 }
-#submittButton{
+
+#submittButton {
     width: 80%;
     height: 30px;
     text-align: center;
     /*Farbe des buttons und des Rander*/
-    background-color:#007bff;
+    background-color: #007bff;
     border-color: #007bff;
     /*Schriftfarbe*/
     color: white;
@@ -164,7 +185,8 @@ body {
 @keyframes slideContent {
     from {
         /*Startposition des Elements*/
-        transform: translate(-50%, 60%);
+        top: 35%;
+        left: 25%;
         /*Sichtbarkeit*/
         opacity: 0;
     }
@@ -172,7 +194,8 @@ body {
     /*Enposition des Elements*/
     to {
         /*Endposition des Elements*/
-        transform: translate(-50%, 50%);
+        top: 22%;
+        left: 25%;
         /*Sichtbarkeit*/
         opacity: 1;
     }
@@ -200,26 +223,7 @@ body {
 @keyframes slideaboutMe {
     from {
         /*Startposition des Elements*/
-        left: 30%;
-        top: 25%;
-        /*Sichtbarkeit*/
-        opacity: 0;
-    }
-
-    /*Enposition des Elements*/
-    to {
-        /*Endposition des Elements*/
-        left: 30%;
-        top: 15%;
-        /*Sichtbarkeit*/
-        opacity: 1;
-    }
-}
-
-@keyframes slidecontact{
-    from {
-        /*Startposition des Elements*/
-        left: 30%;
+        left: 25%;
         top: 30%;
         /*Sichtbarkeit*/
         opacity: 0;
@@ -228,7 +232,26 @@ body {
     /*Enposition des Elements*/
     to {
         /*Endposition des Elements*/
-        left: 30%;
+        left: 25%;
+        top: 18%;
+        /*Sichtbarkeit*/
+        opacity: 1;
+    }
+}
+
+@keyframes slidecontact {
+    from {
+        /*Startposition des Elements*/
+        left: 25%;
+        top: 20%;
+        /*Sichtbarkeit*/
+        opacity: 0;
+    }
+
+    /*Enposition des Elements*/
+    to {
+        /*Endposition des Elements*/
+        left: 25%;
         top: 0%;
         /*Sichtbarkeit*/
         opacity: 1;

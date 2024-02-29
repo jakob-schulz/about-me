@@ -6,15 +6,13 @@
 <head>
     <meta charset="UTF-8"> <!--Verwendung des richtigen Zeichensatzes-->
     <!--Sicherstellen, dass Website auch auf mobilen Geräten ordnungsgemäß funktioniert-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initital-scale =1.0">
-    <!--Einfgen der Schriftart-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+    <!--Einfgen der Schriftart-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital@0;1&display=swap" rel="stylesheet">
     <!--Titel des Tabs-->
     <title>Jakob Schulz</title>
 </head>
@@ -22,22 +20,24 @@
 <body>
     <!--Container-->
     <div id="menuBar">
-        <div class="menulinks">
-            <!--Erzeugen eines buttons mit dem Namen buhome. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
-            <input type="button" id="buhome" class="buttonsStyle" value="Home">
-            </input>
-        </div>
-        <div class="menulinks">
-            <!--Erzeugen eines buttons mit dem Namen buaboutMe. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
-            <input type="button" id="buaboutMe" class="buttonsStyle" value="Über mich">
-            </input>
-        </div>
-        <div class="menulinks">
-            <!--Erzeugen eines buttons mit dem Namen contact. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
-            <input type="button" id="bucontact" class="buttonsStyle" value="Kontakt">
-        </div>
-        <div class="menulinks">
-            Sprachen
+        <div id="ContentMenuBar">
+            <div class="menulinks">
+                <!--Erzeugen eines buttons mit dem Namen buhome. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
+                <input type="button" id="buhome" class="buttonsStyle" value="Home">
+                </input>
+            </div>
+            <div class="menulinks">
+                <!--Erzeugen eines buttons mit dem Namen buaboutMe. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
+                <input type="button" id="buaboutMe" class="buttonsStyle" value="Über mich">
+                </input>
+            </div>
+            <div class="menulinks">
+                <!--Erzeugen eines buttons mit dem Namen contact. Zusaetzlich kann man diesem eine Klasse geben, sodass dieser einen bestimten Stil hat-->
+                <input type="button" id="bucontact" class="buttonsStyle" value="Kontakt">
+            </div>
+            <div class="menulinks">
+                Sprachen
+            </div>
         </div>
     </div>
     <div id="home">
@@ -87,15 +87,15 @@
             </tr>
             <tr>
                 <td>Hobbys:</td>
-                <td><img src="trombone_icon.png" width="30"> Posaune spielen</td>
+                <td><img src="trombone_icon.png" width="20"> Posaune spielen</td>
             </tr>
             <tr>
                 <td></td>
-                <td><img src="football_icon.png" width="30"> Fußball spielen</td>
+                <td><img src="football_icon.png" width="20"> Fußball spielen</td>
             </tr>
             <tr>
                 <td></td>
-                <td><img src="ski_icon.png" width="30"> Skifahren</td>
+                <td><img src="ski_icon.png" width="20"> Skifahren</td>
             </tr>
             <tr>
                 <td>Kenntnisse:</td>
@@ -103,15 +103,15 @@
             </tr>
             <tr>
                 <td></td>
-                <td><img src="C_icon.png" width="30"></td>
+                <td><img src="C_icon.png" width="20"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><img src="C++_icon.png" width="30"></td>
+                <td><img src="C++_icon.png" width="20"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><img src="Csharp_icon.png" width="30"></td>
+                <td><img src="Csharp_icon.png" width="20"></td>
             </tr>
         </table>
     </div>
@@ -122,7 +122,7 @@
                     <th>Kontaktinformationen</th>
                 </tr>
                 <tr>
-                    <td><img src="github_icon.png" width="30">GitHub:</td>
+                    <td><img src="github_icon.png" width="15">GitHub:</td>
                     <td><a id="githublink" href="https://github.com/jakob-schulz">jakob-schulz</a></td>
                 </tr>
             </table>
