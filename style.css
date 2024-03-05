@@ -7,18 +7,19 @@ body {
 
 /*Gibt die groesse der Home Seite in Pixel an*/
 #home {
-    height: 600px;
+    height: 45vw;
 }
 
 /*Menubar erstreckt sich ueber gesamte Seite*/
 #menuBar {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 1;
     background-color: white;
     top: 0%;
-    height: 65px;
+    height: 6vw;
 }
+
 
 /*Format fuer die Menuebar*/
 #ContentMenuBar {
@@ -29,12 +30,11 @@ body {
     display: flex;
     justify-content: space-between;
     /*Groesse und Position der Menubar*/
+    height: 5vw;
     width: 50%;
     left: 25%;
-    /*Rand um die Menubar*/
-    padding: 9px;
     /*Menubar ist an buendig mit oberstem Rand des Fensters*/
-    top: 0%;
+    top: 1vw;
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
     animation: slideMenu 1s linear;
     /*Position muss fixiert sein, damit MenuBar nicht verschwindet*/
@@ -42,13 +42,13 @@ body {
 }
 
 .menulinks {
-    font-size: 200%;
+    font-size: 2.4vw;
 }
 
 /*Stil der Buttons in der Menubar*/
 .buttonsStyle {
     /*Aenderung des Styles des buttons*/
-    font-size: 100%;
+    font-size: 2.4vw;
     background-color: white;
     border-color: white;
     border: 0;
@@ -61,7 +61,7 @@ body {
     /*Setzt den Inhalt auf die Mitte der Seite*/
     position: relative;
     left: 25%;
-    top: 22%;
+    top: 10vw;
     /*transform: translate(-50%, 35%);
     /*bis hier*/
     background-color: white;
@@ -72,21 +72,26 @@ body {
 }
 
 #overview {
+    /* Schriftgroesse (vw steht hierbei fuer viewport width, also fuer die Fensterbreite)*/
+    font-size: 1.3vw;
     /*Richtet den Namen und die Kurzinfos mittig ein*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+#picture{
+
+}
 
 
 #aboutMe {
     position: relative;
-    height: 650px;
+    height: 45vw;
 }
 
 .tableaboutMe {
-    font-size: large;
+    font-size: 1.3vw;
     position: relative;
     top: 18%;
     left: 25%;
@@ -114,7 +119,7 @@ body {
 }
 
 #tablesocialmedia {
-    font-size: large;
+    font-size: 1.3vw;
     padding-bottom: 30px;
 }
 
@@ -214,7 +219,7 @@ body {
     to {
         /*Endposition des Elements*/
         left: 25%;
-        top: 0%;
+        top: 2%;
         /*Sichtbarkeit*/
         opacity: 1;
     }
