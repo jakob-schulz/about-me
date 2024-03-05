@@ -6,8 +6,8 @@ body {
 }
 
 /*Gibt die groesse der Home Seite in Pixel an*/
-#home {
-    height: 45vw;
+.home {
+    height: 120vw;
 }
 
 /*Menubar erstreckt sich ueber gesamte Seite*/
@@ -20,9 +20,8 @@ body {
     height: 6vw;
 }
 
-
 /*Format fuer die Menuebar*/
-#ContentMenuBar {
+.ContentMenuBar {
     /*Sorgt dafuer, dass Menubar nicht hinter anderen Elementen verschwindet*/
     z-index: 2;
     /*bis hier*/
@@ -31,8 +30,8 @@ body {
     justify-content: space-between;
     /*Groesse und Position der Menubar*/
     height: 5vw;
-    width: 50%;
-    left: 25%;
+    width: 80vw;
+    left: 10%;
     /*Menubar ist an buendig mit oberstem Rand des Fensters*/
     top: 1vw;
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
@@ -41,61 +40,57 @@ body {
     position: fixed;
 }
 
-.menulinks {
-    font-size: 2.4vw;
-}
-
 /*Stil der Buttons in der Menubar*/
 .buttonsStyle {
     /*Aenderung des Styles des buttons*/
-    font-size: 2.4vw;
+    font-size: 4vw;
     background-color: white;
     border-color: white;
     border: 0;
 }
 
-
-#content {
+.content {
     /*Festlegen der Breite*/
-    width: 60%;
+    width: 40vw;
     /*Setzt den Inhalt auf die Mitte der Seite*/
     position: relative;
-    left: 25%;
+    left: 25vw;
     top: 10vw;
-    /*transform: translate(-50%, 35%);
     /*bis hier*/
     background-color: white;
-    display: flex;
-    justify-content: center;
     /*Animation wird aufgerufen inklusive Dauer und Art der Bewegung*/
     animation: slideContent 2s linear;
+    /*Die Elemente werden für die Mobilversion in Spalten angeordnet, wobei das Bild zuerst angezeigt wird*/
+    display: flex;
+    flex-direction: column;
 }
 
-#overview {
-    /* Schriftgroesse (vw steht hierbei fuer viewport width, also fuer die Fensterbreite)*/
-    font-size: 1.3vw;
+.overview {
+    font-size: 3vw;
+    order: 2;
     /*Richtet den Namen und die Kurzinfos mittig ein*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#picture{
 
+.pictureAboutMe {
+    width: 40vw;
+    height: auto;
 }
 
-
-#aboutMe {
+.aboutMe {
     position: relative;
-    height: 45vw;
+    height: 100vw;
 }
 
 .tableaboutMe {
-    font-size: 1.3vw;
+    font-size: 3vw;
     position: relative;
-    top: 18%;
-    left: 25%;
-    width: 50%;
+    top: 0vw;
+    left: 15vw;
+    width: 70vw;
     /*Am Anfang ist die Tabelle unsichtbar*/
     opacity: 0;
 }
@@ -106,20 +101,20 @@ body {
 }
 
 
-#contact {
-    height: 600px;
+.contact {
+    height: 90vw;
 }
 
 .contact_information {
     position: relative;
-    height: 600px;
-    width: 40%;
-    left: 25%;
+    height: 90vw;
+    width: 60vw;
+    left: 20vw;
     opacity: 0;
 }
 
-#tablesocialmedia {
-    font-size: 1.3vw;
+.tablesocialmedia {
+    font-size: 3vw;
     padding-bottom: 30px;
 }
 
@@ -184,81 +179,151 @@ body {
 }
 
 
+/*Aussehen der Website, wenn es sich um einen Desktop-Bildschirm handelt*/
+@media(min-width: 700px) {
 
-/*CSS Animationen, die ein Element herein sliden lassen*/
-
-@keyframes slideContent {
-    from {
-        /*Startposition des Elements*/
-        top: 35%;
-        left: 25%;
-        /*Sichtbarkeit*/
-        opacity: 0;
+    [class*="home"] {
+        height: 40vw;
     }
 
-    /*Enposition des Elements*/
-    to {
-        /*Endposition des Elements*/
-        top: 22%;
+    /*Aenderung der Menubar*/
+    [class*="ContentMenuBar"] {
+        width: 50%;
         left: 25%;
-        /*Sichtbarkeit*/
-        opacity: 1;
-    }
-}
-
-@keyframes slideMenu {
-    from {
-        /*Startposition des Elements*/
-        left: 25%;
-        top: -3%;
-        /*Sichtbarkeit*/
-        opacity: 0;
     }
 
-    /*Enposition des Elements*/
-    to {
-        /*Endposition des Elements*/
-        left: 25%;
-        top: 2%;
-        /*Sichtbarkeit*/
-        opacity: 1;
-    }
-}
-
-@keyframes slideaboutMe {
-    from {
-        /*Startposition des Elements*/
-        left: 25%;
-        top: 30%;
-        /*Sichtbarkeit*/
-        opacity: 0;
+    .menulinks {
+        font-size: 2.4vw;
     }
 
-    /*Enposition des Elements*/
-    to {
-        /*Endposition des Elements*/
+    /*Aenderung des Styles der buttons*/
+    [class*="buttonsStyle"] {
+        font-size: 2.2vw;
+    }
+
+    /*Aenderung des Styles des Inhalts des Home Abteils*/
+    [class*="content"] {
+        width: 60%;
         left: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    [class*="overview"] {
+        /* Schriftgroesse (vw steht hierbei fuer viewport width, also fuer die Fensterbreite)*/
+        font-size: 1.3vw;
+        order: 0;
+    }
+
+    [class*="pictureAboutMe"] {
+        width: 20vw;
+        height: auto;
+    }
+
+    [class*="aboutMe"] {
+        height: 50vw;
+    }
+
+    [class*="tableaboutMe"] {
+        font-size: 1.3vw;
         top: 18%;
-        /*Sichtbarkeit*/
-        opacity: 1;
-    }
-}
-
-@keyframes slidecontact {
-    from {
-        /*Startposition des Elements*/
-        left: 25%;
-        top: 20%;
-        /*Sichtbarkeit*/
+        left: 25vw;
+        width: 50vw;
+        height: 35vw;
+        /*Am Anfang ist die Tabelle unsichtbar*/
         opacity: 0;
     }
 
-    /*Enposition des Elements*/
-    to {
-        /*Endposition des Elements*/
-        left: 25%;
-        top: 0%;
-        /*Sichtbarkeit*/
-        opacity: 1;
+    [class*="contact"] {
+        height: 35vw;
+    }
+
+    [class*="contact_information"] {
+        height: 35vw;
+    width: 50vw;
+    left: 25vw;
+    }
+
+    [class*="tablesocialmedia"]{
+        font-size: 1.3vw;
+    }
+
+    /*CSS Animationen, die ein Element herein sliden lassen*/
+
+    @keyframes slideContent {
+        from {
+            /*Startposition des Elements*/
+            top: 35%;
+            left: 25%;
+            /*Sichtbarkeit*/
+            opacity: 0;
+        }
+
+        /*Enposition des Elements*/
+        to {
+            /*Endposition des Elements*/
+            top: 22%;
+            left: 25%;
+            /*Sichtbarkeit*/
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideMenu {
+        from {
+            /*Startposition des Elements*/
+            left: 25%;
+            top: -3%;
+            /*Sichtbarkeit*/
+            opacity: 0;
+        }
+
+        /*Enposition des Elements*/
+        to {
+            /*Endposition des Elements*/
+            left: 25%;
+            top: 2%;
+            /*Sichtbarkeit*/
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideaboutMe {
+        from {
+            /*Startposition des Elements*/
+            left: 25%;
+            top: 30%;
+            /*Sichtbarkeit*/
+            opacity: 0;
+        }
+
+        /*Enposition des Elements*/
+        to {
+            /*Endposition des Elements*/
+            left: 25%;
+            top: 18%;
+            /*Sichtbarkeit*/
+            opacity: 1;
+        }
+    }
+
+    @keyframes slidecontact {
+        from {
+            /*Startposition des Elements*/
+            left: 25%;
+            top: 20%;
+            /*Sichtbarkeit*/
+            opacity: 0;
+        }
+
+        /*Enposition des Elements*/
+        to {
+            /*Endposition des Elements*/
+            left: 25%;
+            top: 0%;
+            /*Sichtbarkeit*/
+            opacity: 1;
+        }
     }
 }
