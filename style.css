@@ -127,20 +127,21 @@ body {
     animation: slidecontact 2s ease-out;
 }
 
-#E-MailContactForm {
-    font-size: large;
-    width: 100%;
+.E-MailContactForm {
+    font-size: 3vw;
+    width: 60vw;
+    height: auto;
 }
 
 .E-MailInput {
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 3vw;
+    padding-bottom: 5vw;
 }
 
-#Email {
-    width: 80%;
+.Email {
+    width: 50vw;
     /*Gibt die Hoehe der Textbox an*/
-    height: 30px;
+    height: 4vw;
     /*Gibt die Dicke, Art und Farbe der Umrandung an*/
     border: 1px solid #ced4da;
     /*Abrundung der Ecken der Eingabefelder*/
@@ -151,10 +152,10 @@ body {
     padding-top: 10px;
 }
 
-#Message {
-    width: 80%;
+.Message {
+    width: 50vw;
     /*Gibt die Hoehe der Textbox an*/
-    height: 100px;
+    height: auto;
     /*Gibt die Dicke, Art und Farbe der Umrandung an*/
     border: 1px solid #ced4da;
     /*Abrundung der Ecken der Eingabefelder*/
@@ -163,8 +164,8 @@ body {
     resize: vertical;
 }
 
-#submittButton {
-    width: 80%;
+.submittButton {
+    width: 51vw;
     height: 30px;
     text-align: center;
     /*Farbe des buttons und des Rander*/
@@ -222,15 +223,15 @@ body {
     }
 
     [class*="aboutMe"] {
-        height: 50vw;
+        height: 60vw;
     }
 
     [class*="tableaboutMe"] {
         font-size: 1.3vw;
-        top: 18%;
+        top: 8vw;
         left: 25vw;
         width: 50vw;
-        height: 35vw;
+        height: 40vw;
         /*Am Anfang ist die Tabelle unsichtbar*/
         opacity: 0;
     }
@@ -241,12 +242,35 @@ body {
 
     [class*="contact_information"] {
         height: 35vw;
-    width: 50vw;
-    left: 25vw;
+        width: 50vw;
+        left: 25vw;
     }
 
-    [class*="tablesocialmedia"]{
+    [class*="tablesocialmedia"] {
         font-size: 1.3vw;
+    }
+
+    [class*="E-MailContactForm"] {
+        font-size: 1.3vw;
+    }
+
+    [class*="E-MailInput"]{
+        padding-top: 2vw;
+        padding-bottom: 2.5vw;
+    }
+
+    [class*="Email"] {
+        width: 40vw;
+        /*Gibt die Hoehe der Textbox an*/
+        height: 2vw;
+    }
+
+    [class*="Message"] {
+        width: 40vw;
+    }
+
+    [class*="submittButton"] {
+        width: 40vw;
     }
 
     /*CSS Animationen, die ein Element herein sliden lassen*/
@@ -263,7 +287,7 @@ body {
         /*Enposition des Elements*/
         to {
             /*Endposition des Elements*/
-            top: 22%;
+            top: 25%;
             left: 25%;
             /*Sichtbarkeit*/
             opacity: 1;
@@ -283,7 +307,7 @@ body {
         to {
             /*Endposition des Elements*/
             left: 25%;
-            top: 2%;
+            top: 1vw;
             /*Sichtbarkeit*/
             opacity: 1;
         }
@@ -292,7 +316,7 @@ body {
     @keyframes slideaboutMe {
         from {
             /*Startposition des Elements*/
-            left: 25%;
+            left: 25vw;
             top: 30%;
             /*Sichtbarkeit*/
             opacity: 0;
@@ -301,7 +325,7 @@ body {
         /*Enposition des Elements*/
         to {
             /*Endposition des Elements*/
-            left: 25%;
+            left: 25vw;
             top: 18%;
             /*Sichtbarkeit*/
             opacity: 1;
@@ -311,7 +335,7 @@ body {
     @keyframes slidecontact {
         from {
             /*Startposition des Elements*/
-            left: 25%;
+            left: 25vw;
             top: 20%;
             /*Sichtbarkeit*/
             opacity: 0;
@@ -320,7 +344,7 @@ body {
         /*Enposition des Elements*/
         to {
             /*Endposition des Elements*/
-            left: 25%;
+            left: 25vw;
             top: 0%;
             /*Sichtbarkeit*/
             opacity: 1;
